@@ -2,6 +2,7 @@ import "./style.css";
 import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 import { Texture } from "three";
+import { randFloat, randInt } from "three/src/math/MathUtils";
 
 // Setup
 
@@ -35,7 +36,7 @@ renderer.render(scene, camera);
 
 // Saturn Texture
 const saturnTexture = new THREE.TextureLoader().load("./textures/8k_saturn.jpg");
-const saturnNormalTexture = new THREE.TextureLoader().load("file.jpg");
+const saturnNormalTexture = new THREE.TextureLoader().load("./textures/file.jpg");
 
 // Saturn Mesh
 const saturnPlanet = new THREE.Mesh(
@@ -81,20 +82,27 @@ pointLight.position.set(5, 5, -10);
 const ambientLight = new THREE.AmbientLight(0xffffff);
 scene.add(pointLight, ambientLight);
 
-function addStar() {
-  const geometry = new THREE.SphereGeometry(0.1, 24, 24);
-  const material = new THREE.MeshStandardMaterial({ color: 0xffffff });
-  const star = new THREE.Mesh(geometry, material);
+// Asteroids
+
+function addAsteroid() {
+  const asteroidTexture = new THREE.TextureLoader().load("./textures/asteroid.jpg");
+  const asteroidNormalTexture = new THREE.TextureLoader().load("./textures/asteroid_normal.jpg");
+  const geometry = new THREE.SphereGeometry(0.1, 32, 32);
+  const material = new THREE.MeshStandardMaterial({ 
+    map: asteroidTexture,
+    normalMap: asteroidNormalTexture,
+   });
+  const asteroid = new THREE.Mesh(geometry, material);
 
   const [x, y, z] = Array(3)
     .fill()
     .map(() => THREE.MathUtils.randFloatSpread(100));
 
-  star.position.set(x, y, z);
-  scene.add(star);
+  asteroid.position.set(x, y, z);
+  scene.add(asteroid);
 }
 
-Array(200).fill().forEach(addStar);
+Array(200).fill().forEach(addAsteroid);
 
 // Background
 
