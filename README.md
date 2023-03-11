@@ -6,7 +6,7 @@ This is a 3D work-in-progress representation of the solar system created using t
 
 ## Getting Started
 
-To run the project, simply open index.html in a web browser.
+To run the project, simply open `index.html` in a web browser.
 
 ## Features
 
