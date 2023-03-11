@@ -34,7 +34,7 @@ camera.position.setX(-3);
 renderer.render(scene, camera);
 
 // Saturn Texture
-const saturnTexture = new THREE.TextureLoader().load("8k_saturn.jpg");
+const saturnTexture = new THREE.TextureLoader().load("./textures/8k_saturn.jpg");
 const saturnNormalTexture = new THREE.TextureLoader().load("file.jpg");
 
 // Saturn Mesh
@@ -47,7 +47,7 @@ const saturnPlanet = new THREE.Mesh(
 );
 
 // Saturn Ring Texture
-const saturnRingTexture = new THREE.TextureLoader().load("saturn_ring.png");
+const saturnRingTexture = new THREE.TextureLoader().load("./textures/saturn_ring.png");
 
 const geometry = new THREE.RingBufferGeometry(6, 10, 64);
 var pos = geometry.attributes.position;
@@ -98,13 +98,13 @@ Array(200).fill().forEach(addStar);
 
 // Background
 
-const spaceTexture = new THREE.TextureLoader().load("space.jpg");
+const spaceTexture = new THREE.TextureLoader().load("./textures/space.jpg");
 scene.background = spaceTexture;
 
 // Moon
 
-const moonTexture = new THREE.TextureLoader().load("moon.jpg");
-const normalTexture = new THREE.TextureLoader().load("normal.jpg");
+const moonTexture = new THREE.TextureLoader().load("./textures/moon.jpg");
+const normalTexture = new THREE.TextureLoader().load("./textures/normal.jpg");
 
 const moon = new THREE.Mesh(
   new THREE.SphereGeometry(3, 32, 32),
