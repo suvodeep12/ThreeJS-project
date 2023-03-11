@@ -19,11 +19,11 @@ To run the project, simply open index.html in a web browser.
 
 ## Libraries Used
 
-Three.js - A JavaScript 3D library that makes creating WebGL applications easy.
-OrbitControls - A controller that allows the user to manipulate the camera using mouse and touch controls.
+- [Three.js](https://threejs.org/) - A JavaScript 3D library that makes creating WebGL applications easy.
+- [OrbitControls](https://threejs.org/docs/index.html?q=orbit#examples/en/controls/OrbitControls) - A controller that allows the user to manipulate the camera using mouse and touch controls.
 
 ## Acknowledgments
 
 This project was inspired by [Fireship's](https://www.youtube.com/@Fireship) [video](https://www.youtube.com/watch?v=Q7AOvWpIVHU), which demonstrated how to create a similar webpage using ThreeJS.
 
-The textures used in this project were downloaded from solarsystemscope.com and textures.com.
+The textures used in this project were downloaded from [solarsystemscope.com](https://www.solarsystemscope.com/textures/) and [textures.com](https://www.textures.com/).
